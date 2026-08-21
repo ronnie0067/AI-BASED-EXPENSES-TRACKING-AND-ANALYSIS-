@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@500&display=swap');
+
+/* ==========================================
+   1. VIBRANT CYBER-TECH BACKGROUND & BRIGHT BASE
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.35) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(236, 72, 153, 0.3) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(14, 165, 233, 0.3) 0px, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-attachment: fixed;
+  color: #ffffff; /* Upgraded to Pure White for maximum contrast */
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Make all headings pure white with a subtle text glow */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  font-weight: 700;
+}
+
+/* ==========================================
+   2. FROSTED GLASS NAVBAR
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  height: 70px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #38bdf8 0%, #a5b4fc 50%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+  color: #e2e8f0; /* Brightened from muted slate to crisp light grey */
+  font-weight: 500;
+}
+
+/* ==========================================
+   3. TECH GLASS CARDS
+   ========================================== */
+.main-container {
+  max-width: 720px;
+  margin: 0 auto 5rem auto !important;
+  padding-top: 840px !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2.2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1.75rem;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.card p {
+  color: #e2e8f0; /* Brightened body copy inside cards */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+}
+
+/* ==========================================
+   4. NEON INPUTS & SELECTS (HIGH CONTRAST)
+   ========================================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff; /* Crisp white text inside input boxes */
+  transition: all 0.25s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25), 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Brightened placeholder text so it never fades into the dark box */
+input::placeholder {
+  color: #cbd5e1;
+  opacity: 0.8;
+}
+
+select option {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ==========================================
+   5. GLOWING TECH BUTTONS
+   ========================================== */
+.btn {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 0.3px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #db2777 100%);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6), 0 0 15px rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-ai {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #00ff87 100%);
+  background-size: 200% 200%;
+  color: #000000; /* Dark text on bright neon cyan for maximum contrast */
+  font-weight: 800;
+  box-shadow: 0 4px 20px rgba(0, 255, 135, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.btn-ai:hover {
+  background-position: right center;
+  box-shadow: 0 6px 25px rgba(0, 255, 135, 0.6), 0 0 20px rgba(0, 242, 254, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-ai:disabled {
+  background: #334155;
+  color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.btn-outline:hover {
+  color: #ffffff;
+  background: rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.25);
+  color: #ffffff;
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+/* ==========================================
+   6. AI ADVISOR CYBER CARD & ALERTS
+   ========================================== */
+.ai-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-top: 4px solid #38bdf8;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+.routine-box {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.daily-limit-badge {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.25));
+  color: #6ee7b7; /* Ultra-bright neon mint green */
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin: 14px 0;
+  border: 1px solid rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+  font-family: 'Fira Code', monospace;
+  text-shadow: 0 0 10px rgba(110, 231, 183, 0.4);
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.6);
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+}
+
+/* ==========================================
+   7. EXPENSE LIST ITEMS (BRIGHT TEXT HOVER)
+   ========================================== */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 22px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expense-item span {
+  color: #ffffff; /* Guaranteed bright white for expense names */
+  font-weight: 600;
+}
+
+.expense-item:hover {
+  transform: translateX(6px) translateY(-2px);
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.category-tag {
+  font-size: 0.8rem;
+  background: rgba(99, 102, 241, 0.35);
+  color: #ffffff !important; /* Pure white text inside tags */
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-left: 12px;
+  border: 1px solid rgba(165, 180, 252, 0.5);
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
